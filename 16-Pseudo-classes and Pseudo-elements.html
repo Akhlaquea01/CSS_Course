@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-classes and Pseudo-elements</title>
+    <style>
+        /* Basic Pseudo-classes */
+        /* Hover effect */
+        .hover-example:hover {
+            color: #FF5733;
+            background-color: #F2F2F2;
+        }
+
+        /* Active effect (click) */
+        .active-example:active {
+            color: #33FF57;
+            transform: scale(1.2);
+        }
+
+        /* Focus effect (when input field is focused) */
+        .focus-example:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 5px #007BFF;
+        }
+
+        /* Pseudo-elements */
+        /* Adding content before an element */
+        .before-example::before {
+            content: "Before Content";
+            display: block;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        /* Adding content after an element */
+        .after-example::after {
+            content: "After Content";
+            display: block;
+            color: #FF5733;
+            font-style: italic;
+        }
+
+        /* Creating tooltips with ::before */
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip-container::before {
+            content: attr(data-tooltip);
+            /* Insert tooltip text from data attribute */
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #007BFF;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            /* Allow interactions with elements beneath */
+        }
+
+        .tooltip-container:hover::before {
+            opacity: 1;
+            /* Show tooltip on hover */
+            transform: translateX(-50%) translateY(-10px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Basic Pseudo-classes -->
+    <h2>Basic Pseudo-classes</h2>
+    <p class="hover-example">Hover Me (Hover)</p>
+    <button class="active-example">Click Me (Active)</button>
+    <input type="text" class="focus-example" placeholder="Focus Me (Focus)">
+
+    <!-- Pseudo-elements -->
+    <h2>Pseudo-elements</h2>
+    <p><span class="before-example">Content</span> - Adding content before an element</p>
+    <p><span class="after-example">Content</span> - Adding content after an element</p>
+
+    <div class="tooltip-container" data-tooltip="Tooltip Text">
+        Hover Me (Tooltip)
+    </div> - Creating tooltips with ::before
+</body>
+
+</html>

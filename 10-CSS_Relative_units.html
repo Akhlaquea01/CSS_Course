@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Units Examples</title>
+    <style>
+        /* Common styles for all elements */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 20px;
+            background-color: #3498db;
+            color: white;
+        }
+
+        /* Example 1: Using 'em' for font size */
+        .example-1 {
+            font-size: 1.2em;
+            /* 1.2 times the parent font size */
+
+            /* Added a border to make the example more visible */
+            border: 1px solid #ccc;
+        }
+
+        /* Example 2: Using 'em' for margin and padding */
+        .example-2 {
+            margin: 0.5em;
+            /* 0.5 times the parent font size */
+            padding: 1em;
+            /* 1 times the parent font size */
+            background-color: #f0f0f0;
+
+            /* Added a border to make the example more visible */
+            border: 1px solid #ccc;
+        }
+
+        /* Example 3: Using 'rem' for font size */
+        .example-3 {
+            font-size: 1.2rem;
+            /* 1.2 times the root (html) font size */
+
+            /* Added a border to make the example more visible */
+            border: 1px solid #ccc;
+        }
+
+        /* Example 4: Using '%' for width */
+        .example-4 {
+            width: 50%;
+            /* 50% of the parent's width */
+            background-color: #3498db;
+            color: white;
+
+            /* Added a border to make the example more visible */
+            border: 1px solid #ccc;
+        }
+
+        /* Example 5: Using '%' for padding */
+        .example-5 {
+            padding: 5%;
+            /* 5% of the parent's width */
+            background-color: #f0f0f0;
+
+            /* Added a border to make the example more visible */
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Relative Units Examples</h1>
+
+    <div class="example-1">
+        <p>Example 1: Using 'em' for font size. This text is 1.2 times the parent font size.</p>
+    </div>
+
+    <div class="example-2">
+        <p>Example 2: Using 'em' for margin and padding. This box has 0.5em margin and 1em padding.</p>
+    </div>
+
+    <div class="example-3">
+        <p>Example 3: Using 'rem' for font size. This text is 1.2 times the root (html) font size.</p>
+    </div>
+
+    <div class="example-4">
+        <p>Example 4: Using '%' for width. This box occupies 50% of the parent's width.</p>
+    </div>
+
+    <div class="example-5">
+        <p>Example 5: Using '%' for padding. This box has padding equal to 5% of the parent's width.</p>
+    </div>
+</body>
+
+</html>

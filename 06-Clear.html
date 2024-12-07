@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial: Floats and Clearing Floats</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #444;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .float-example {
+            width: 150px;
+            height: 150px;
+            float: left;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 150px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .clearfix-left::after {
+            content: "";
+            display: table;
+            clear: left;
+        }
+
+        .clearfix-both::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSS Tutorial: Floats and Clearing Floats</h1>
+
+        <!-- Part 1: Clearing Floats to the Left -->
+        <div class="section">
+            <h2>Clearing Floats to the Left</h2>
+            <p>This section demonstrates how to clear floats to the left.</p>
+            <div class="float-example">Float one</div>
+            <div class="float-example">Float two</div>
+            <div class="clearfix-left"></div>
+            <p>This paragraph will appear below the floated elements, but to the right of them.</p>
+        </div>
+
+        <!-- Part 2: Clearing Floats to Both Sides -->
+        <div class="section">
+            <h2>Clearing Floats to Both Sides</h2>
+            <p>This section demonstrates how to clear floats to both sides.</p>
+            <div class="float-example">Float three</div>
+            <div class="float-example">Float four</div>
+            <div class="clearfix-both"></div>
+            <p>This paragraph will appear below the floated elements, and centered below them.</p>
+        </div>
+    </div>
+</body>
+
+</html>

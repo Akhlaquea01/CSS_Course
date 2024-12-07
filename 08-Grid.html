@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout Example</title>
+    <style>
+        /* Define the grid container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* Three equal-width columns */
+            grid-template-rows: 100px 200px;
+            /* Two rows with specified heights */
+            grid-gap: 20px;
+            /* Gap between grid items */
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* Define grid items */
+        .grid-item {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        /* Additional styling for clarity */
+        .header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Define a responsive grid with auto columns and minmax for responsiveness */
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: 20px;
+        }
+
+        /* Define nested grids */
+        .outer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .inner-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        /* Define an auto-placement grid with a specified grid item size */
+        .auto-placement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 150px);
+            grid-auto-rows: 150px;
+            grid-gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">CSS Grid Layout Example</div>
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+    </div>
+    <hr>
+
+    <!-- Example 2: Responsive Grid -->
+    <div class="responsive-grid">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+    </div>
+    <hr>
+    <div class="grid-container">
+        <div class="grid-item" style="grid-area: header;">Header</div>
+        <div class="grid-item" style="grid-area: sidebar;">Sidebar</div>
+        <div class="grid-item" style="grid-area: main;">Main Content</div>
+        <div class="grid-item" style="grid-area: footer;">Footer</div>
+    </div>
+    <!-- Nested Grid -->
+    <hr>
+    <div class="outer-grid">
+        <div class="grid-item">Outer Grid Item 1</div>
+        <div class="grid-item">Outer Grid Item 2</div>
+        <div class="inner-grid">
+            <div class="grid-item">Inner Grid Item 1</div>
+            <div class="grid-item">Inner Grid Item 2</div>
+            <div class="grid-item">Inner Grid Item 2</div>
+            <div class="grid-item">Inner Grid Item 2</div>
+            <div class="grid-item">Inner Grid Item 2</div>
+            <div class="grid-item">Inner Grid Item 2</div>
+        </div>
+    </div>
+    <!-- Example 4: Grid Auto-placement -->
+    <hr>
+    <div class="auto-placement-grid">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 3</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Typography</title>
+    <style>
+        /* Font properties */
+        .font-example {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            line-height: 1.5;
+            /* Adjust line height */
+            letter-spacing: 2px;
+            /* Adjust letter spacing */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Add text shadow */
+        }
+
+        /* Text properties */
+        .text-example {
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+
+        /* Web fonts using Google Fonts */
+        .google-font-example {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Web fonts using @font-face */
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('path-to-your-custom-font.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .custom-font-example {
+            font-family: 'CustomFont', sans-serif;
+        }
+
+        /* Text shadow and text outline */
+        .advanced-text-example {
+            font-size: 32px;
+            color: #007bff;
+            /* Text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Text shadow */
+            -webkit-text-stroke: 2px #ff0000;
+            /* Text outline for non-WebKit browsers */
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="font-example">Font Example</div>
+    <div class="text-example">Text Example</div>
+    <div class="google-font-example">Google Font Example (Roboto)</div>
+    <div class="custom-font-example">Custom Font Example (Loaded using @font-face)</div>
+    <div class="advanced-text-example">Advanced Text Example with Shadow and Outline</div>
+</body>
+
+</html>

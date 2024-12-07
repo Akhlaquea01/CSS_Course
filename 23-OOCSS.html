@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOCSS (Object-Oriented CSS)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        /* Reset some default styles for a clean slate */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Apply basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Block: Header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .header__nav {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .header__menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* Add this */
+        }
+
+        .header__menu-item {
+            margin-right: 20px;
+            display: flex;
+            /* Add this */
+            align-items: center;
+            /* Add this to vertically center items */
+        }
+
+        .header__menu-link {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .header__menu-link--active {
+            font-weight: bold;
+        }
+
+        /* Block: Content */
+        .content {
+            padding: 20px;
+        }
+
+        .content__block {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .content__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content__text {
+            font-size: 16px;
+        }
+
+        /* Block: Button */
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Modifier: Primary Button */
+        .button--primary {
+            background-color: #ff6600;
+        }
+
+        /* Block: Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .footer__copyright {
+            font-size: 14px;
+        }
+    </style>
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Home</a></li>
+                <li class="header__menu-item"><a href="#" class="header__menu-link">About</a></li>
+                <li class="header__menu-item"><a href="#" class="header__menu-link header__menu-link--active">OOCSS</a>
+                </li>
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="content__block">
+            <h1 class="content__title">Understanding OOCSS (Object-Oriented CSS)</h1>
+            <p class="content__text">OOCSS, which stands for Object-Oriented CSS, is a methodology for writing CSS
+                that encourages reusability and modularity. It's based on the principles of object-oriented programming
+                and focuses on creating independent, self-contained CSS objects or "objects."</p>
+            <p class="content__text">In OOCSS:</p>
+            <ul class="content__list">
+                <li class="content__list-item">CSS styles are divided into <strong>objects</strong>, which are
+                    reusable components with their own styles.</li>
+                <li class="content__list-item">Objects can be composed and combined to create complex user interfaces,
+                    promoting code reusability and maintainability.</li>
+                <li class="content__list-item">Separation of structure (layout) and skin (appearance) is a key
+                    principle. Objects should separate structural styles from visual styles.</li>
+                <li class="content__list-item">OOCSS encourages the use of <strong>classes</strong> rather than
+                    element selectors for styling. This allows greater flexibility and reusability.</li>
+                <li class="content__list-item">States and themes can be applied to objects to modify their
+                    appearance or behavior without changing their core styles.</li>
+            </ul>
+            <p class="content__text">By following the OOCSS approach, web developers can create CSS code that is
+                more modular, maintainable, and efficient, leading to a smoother development process and reducing the
+                risk of style conflicts.</p>
+            <button class="button">Learn More</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">© 2023 OOCSS</p>
+    </footer>
+</body>
+
+</html>

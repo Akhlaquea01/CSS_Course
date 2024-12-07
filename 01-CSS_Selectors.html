@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors & CSS Properties and Values</title>
+</head>
+
+<body>
+    <style>
+        /*
+            selector {
+                property: value;
+            } 
+        */
+
+        /* Select all <p> elements and make their text red */
+        p {
+            color: red;
+        }
+
+        /* Select elements with class="highlight" and make their text bold */
+        .highlight {
+            font-weight: bold;
+        }
+
+        /* Select the element with id="myDiv" and give it a border */
+        #myDiv {
+            border: 1px solid black;
+        }
+
+        /* Select input elements with type="text" and change their border color */
+        input[type="text"] {
+            border-color: blue;
+        }
+    </style>
+
+    <p class="highlight">This is a highlighted paragraph.</p>
+    <div id="myDiv">This is a div with an ID.</div>
+    <input type="text" placeholder="Enter your name">
+
+</body>
+
+</html>

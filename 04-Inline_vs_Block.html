@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial: Display Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .box-example {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #444;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .block-example {
+            display: block;
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .inline-example {
+            display: inline;
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .inline-block-example {
+            display: inline-block;
+            background-color: #27ae60;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSS Tutorial: Display Property</h1>
+
+        <!-- Part 1: Block Value -->
+        <div class="section">
+            <h2>Block Value</h2>
+            <p>The <code>display: block;</code> value makes an element a block-level element. Block-level elements
+                create a new block in the layout and typically start on a new line. They occupy the full width available
+                by default.</p>
+            <div class="box-example block-example">
+                This is a block-level element.
+            </div>
+        </div>
+
+        <!-- Part 2: Inline Value -->
+        <div class="section">
+            <h2>Inline Value</h2>
+            <p>The <code>display: inline;</code> value makes an element an inline-level element. Inline-level elements
+                do not create a new block. They flow within the content horizontally and only take up as much width as
+                necessary for their content.</p>
+            <span class="box-example inline-example">
+                This is an inline-level element.
+            </span>
+        </div>
+
+        <!-- Part 3: Inline-Block Value -->
+        <div class="section">
+            <h2>Inline-Block Value</h2>
+            <p>The <code>display: inline-block;</code> value combines aspects of both block and inline. Inline-block
+                elements flow within the content horizontally, but they also allow you to set width, height, margins,
+                and padding.</p>
+            <span class="box-example inline-block-example">
+                This is an inline-block element. It has a fixed width and height.
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>

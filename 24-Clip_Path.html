@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Custom Shapes with clip-path</title>
+    <style>
+        .custom-shape {
+            width: 200px;
+            height: 100px;
+            background-color: #3498db;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            /* The clip-path property defines the shape. Here, it's a parallelogram. */
+            color: white;
+            text-align: center;
+            /* padding: 20px; */
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="custom-shape">
+        This is a custom shape created with CSS clip-path.
+    </div>
+</body>
+
+</html>

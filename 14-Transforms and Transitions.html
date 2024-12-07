@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Transforms and Transitions</title>
+    <style>
+        /* CSS transforms */
+        .transform-example {
+            width: 100px;
+            height: 100px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+            transition: transform 0.5s ease;
+            /* Transition property for smooth animation */
+        }
+
+        /* Hover effect */
+        .transform-example:hover {
+            transform:
+                rotate(45deg)
+                /* Rotate by 45 degrees */
+                scale(1.2)
+                /* Scale to 120% */
+                translate(20px, 20px)
+                /* Translate 20px down and 20px right */
+                skew(20deg, 20deg);
+            /* Skew horizontally and vertically by 20 degrees */
+        }
+
+        /* 3D Transforms */
+        .cube {
+            width: 100px;
+            height: 100px;
+            background-color: #FF5733;
+            perspective: 600px;
+            /* Perspective for 3D effect */
+            margin: 20px;
+        }
+
+        .cube-inner {
+            width: 100%;
+            height: 100%;
+            background-color: #007BFF;
+            transform: rotateX(45deg) rotateY(45deg);
+            /* 3D rotation */
+            transition: transform 0.5s ease;
+            /* Transition for 3D animation */
+        }
+
+        .cube:hover .cube-inner {
+            transform: rotateX(0deg) rotateY(0deg);
+            /* Reset rotation on hover */
+        }
+
+        /* Transition Delay */
+        .delayed-transition {
+            width: 100px;
+            height: 100px;
+            background-color: #33FF57;
+            transition: transform 0.5s ease, opacity 0.5s ease 0.3s;
+            /* Delayed transition for opacity */
+            margin: 20px;
+        }
+
+        .delayed-transition:hover {
+            transform: scale(1.2);
+            opacity: 0.5;
+            /* Opacity change delayed by 0.3 seconds */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transform-example">Hover Me</div>
+
+    <div class="cube">
+        <div class="cube-inner"></div>
+    </div>
+
+    <div class="delayed-transition">Hover Me for Delayed Transition</div>
+</body>
+
+</html>

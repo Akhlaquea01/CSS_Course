@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Responsive Images Example</title>
+    <style>
+        /* Style for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Advanced Responsive Images Example</h2>
+
+    <p>This example demonstrates various aspects of responsive images.</p>
+
+    <!-- Using the srcset attribute -->
+    <h3>Using the <code>srcset</code> attribute</h3>
+    <img src="https://via.placeholder.com/400x200.png" srcset="https://via.placeholder.com/400x200.png 400w,
+                  https://via.placeholder.com/800x400.png 800w,
+                  https://via.placeholder.com/1200x600.png 1200w" sizes="(min-width: 400px) 50vw,
+                100vw" alt="Responsive Image Example">
+
+    <!-- Using different image formats -->
+    <h3>Using Different Image Formats</h3>
+    <img src="https://via.placeholder.com/400x200.jpg" srcset="https://via.placeholder.com/400x200.jpg 400w,
+                  https://via.placeholder.com/800x400.png 400w 2x,
+                  https://via.placeholder.com/400x200.webp 400w" sizes="(min-width: 400px) 50vw,
+                100vw" alt="Responsive Image Example">
+
+    <!-- Using densities for high-resolution screens -->
+    <h3>Using Densities for High-Resolution Screens</h3>
+    <img src="https://via.placeholder.com/800x400.jpg" srcset="https://via.placeholder.com/800x400.jpg 800w,
+                  https://via.placeholder.com/1600x800.jpg 1600w 2x,
+                  https://via.placeholder.com/1200x600.jpg 1200w" sizes="(min-width: 400px) 50vw,
+                100vw" alt="Responsive Image Example">
+
+    <!-- Using the picture element for art direction -->
+    <h3>Art Direction with the <code>picture</code> element</h3>
+    <picture>
+        <source srcset="https://via.placeholder.com/1200x600.jpg" media="(orientation: portrait)">
+        <source srcset="https://via.placeholder.com/1920x1080.jpg" media="(orientation: landscape)">
+        <img src="https://via.placeholder.com/1920x1080.jpg" alt="Responsive Image Example">
+    </picture>
+</body>
+
+</html>

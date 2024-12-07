@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Concepts</title>
+    <style>
+        /* Define the flex container */
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            /* Change to 'column' for vertical alignment */
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            align-content: space-between;
+            height: 300px;
+            /* Set a fixed height for demonstration */
+            border: 2px solid #333;
+        }
+
+        /* Define flex items */
+        .flex-item {
+            flex: 1;
+            /* Equivalent to flex: 1 1 auto; */
+            order: 0;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+        }
+
+
+        /* Define the flex container for the navigation menu */
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Define flex items for navigation links */
+        .nav-item {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Style the flex items */
+        .nav-item:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+    </div>
+
+    <div class="nav-container">
+        <div class="nav-item">Home</div>
+        <div class="nav-item">About</div>
+        <div class="nav-item">Services</div>
+        <div class="nav-item">Portfolio</div>
+        <div class="nav-item">Contact</div>
+    </div>
+</body>
+
+</html>

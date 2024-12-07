@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions and Transforms Examples</title>
+    <style>
+        /* Styling for the square element */
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: all 0.3s ease;
+        }
+
+        /* Define a hover effect for the square */
+        .square:hover {
+            transform: scale(1.2);
+            background-color: red;
+            margin-left: 50px;
+        }
+
+        /* Styling for the rotating element */
+        .rotate {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            transition: transform 0.3s ease;
+        }
+
+        /* Rotate the element on hover */
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        /* Styling for the text */
+        .text-color {
+            color: blue;
+            transition: color 0.3s ease;
+        }
+
+        /* Change text color on hover */
+        .text-color:hover {
+            color: red;
+        }
+
+        /* Styling for the scaling element */
+        .scale {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            transition: transform 0.3s ease;
+        }
+
+        /* Scale the element when clicked */
+        .scale.active {
+            transform: scale(1.5);
+        }
+
+        /* Animation keyframes */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(200px);
+            }
+        }
+
+        /* Styling for the animated element */
+        .keyframe-animation {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            animation: slide 2s ease infinite alternate;
+            animation-play-state: paused;
+            /* Animation starts in paused state */
+        }
+
+        /* Center the content on the page */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Style for action buttons */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        /* Style for labels */
+        label {
+            font-size: 18px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label>Example 1: Hover to Scale and Change Color</label>
+        <div class="square"></div>
+        <button onclick="toggleSquare()">Hover Me</button>
+
+        <label>Example 2: Hover to Rotate</label>
+        <div class="rotate"></div>
+        <button onclick="rotateElement()">Hover to Rotate</button>
+
+        <label>Example 3: Hover to Change Text Color</label>
+        <p class="text-color">Hover over me to change text color!</p>
+
+        <label>Example 4: Click to Scale</label>
+        <div class="scale"></div>
+        <button onclick="toggleScale()">Click to Scale</button>
+
+        <label>Example 5: Start Animation</label>
+        <div class="keyframe-animation"></div>
+        <button onclick="startAnimation()">Start Animation</button>
+    </div>
+
+    <script>
+        function toggleSquare() {
+            const square = document.querySelector('.square');
+            square.classList.toggle('active');
+        }
+
+        function rotateElement() {
+            const rotate = document.querySelector('.rotate');
+            rotate.classList.toggle('active');
+        }
+
+        function toggleScale() {
+            const scale = document.querySelector('.scale');
+            scale.classList.toggle('active');
+        }
+
+        function startAnimation() {
+            const keyframeAnimation = document.querySelector('.keyframe-animation');
+            keyframeAnimation.style.animationPlayState = 'running';
+        }
+    </script>
+</body>
+
+</html>

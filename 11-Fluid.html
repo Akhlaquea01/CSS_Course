@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fluid Layouts Tutorial</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Common Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        /* Fluid Columns */
+        .column-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+            min-width: calc(33.33% - 20px);
+            margin-right: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+
+        /* Clearfix for the last column */
+        .column:last-child {
+            margin-right: 0;
+        }
+
+        /* Media Query for Smaller Screens */
+        @media screen and (max-width: 600px) {
+            .column {
+                min-width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSS Fluid Layouts Tutorial</h1>
+
+        <p>Welcome to our CSS fluid layouts tutorial. In this tutorial, we will explore the concept of fluid layouts and
+            how to create them using CSS.</p>
+
+        <h2>Fluid Widths</h2>
+        <p>One of the key principles of fluid layouts is using percentage widths for elements to make them adjust to the
+            screen size.</p>
+        <div class="column-container">
+            <div class="column">Column 1</div>
+            <div class="column">Column 2</div>
+            <div class="column">Column 3</div>
+        </div>
+
+        <h2>Fluid Images</h2>
+        <p>Images can also be made responsive and fluid by setting a maximum width of 100%.</p>
+        <img src="example.jpg" alt="Example Image" style="max-width: 100%; height: auto;">
+
+        <!-- More sections can be added -->
+
+        <h2>Conclusion</h2>
+        <p>In conclusion, fluid layouts are essential for creating responsive designs that adapt to various screen
+            sizes.</p>
+    </div>
+</body>
+
+</html>

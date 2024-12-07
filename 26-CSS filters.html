@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filter Examples</title>
+    <style>
+        .filter-example {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .grayscale {
+            filter: grayscale(100%);
+        }
+
+        .blur {
+            filter: blur(5px);
+        }
+
+        .brightness {
+            filter: brightness(50%);
+        }
+
+        .contrast {
+            filter: contrast(200%);
+        }
+
+        .hue-rotate {
+            filter: hue-rotate(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="filter-example">
+        <img class="grayscale" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="Grayscale Image">
+        <p>Grayscale</p>
+    </div>
+
+    <div class="filter-example">
+        <img class="blur" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="Blurred Image">
+        <p>Blur</p>
+    </div>
+
+    <div class="filter-example">
+        <img class="brightness" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="Dimmed Image">
+        <p>Brightness</p>
+    </div>
+
+    <div class="filter-example">
+        <img class="contrast" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="High Contrast Image">
+        <p>Contrast</p>
+    </div>
+
+    <div class="filter-example">
+        <img class="hue-rotate" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="Hue Rotated Image">
+        <p>Hue Rotate</p>
+    </div>
+</body>
+
+</html>

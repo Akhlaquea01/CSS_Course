@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Colors and Backgrounds</title>
+    <style>
+        /* Color properties */
+        .color-example {
+            color: #FF5733;
+            /* Text color */
+        }
+
+        /* Background properties */
+        .background-example {
+            background-color: #EFEFEF;
+            /* Background color */
+            padding: 20px;
+        }
+
+        /* Background image and repeat properties */
+        .background-image-example {
+            background-image: url('https://via.placeholder.com/400x200');
+            /* Background image URL */
+            background-repeat: no-repeat;
+            /* Prevent image from repeating */
+            background-size: cover;
+            /* Scale the image to cover the element */
+            height: 200px;
+        }
+
+        /* Linear Gradient */
+        .linear-gradient-example {
+            background: linear-gradient(to bottom, #FF5733, #007BFF);
+            /* Vertical gradient */
+            color: white;
+            /* Text color */
+            padding: 20px;
+        }
+
+        /* Radial Gradient */
+        .radial-gradient-example {
+            background: radial-gradient(circle, #FF5733, #007BFF);
+            /* Radial gradient */
+            color: white;
+            /* Text color */
+            padding: 20px;
+        }
+
+        /* Multiple Backgrounds */
+        .multiple-backgrounds-example {
+            background-image: url('https://via.placeholder.com/200x200'), linear-gradient(to right, #FF5733, #007BFF);
+            background-repeat: no-repeat;
+            background-size: contain, cover;
+            height: 200px;
+        }
+
+        /* Background Blend Mode */
+        .blend-mode-example {
+            background-image: url('https://via.placeholder.com/400x200');
+            background-color: #007BFF;
+            background-blend-mode: multiply;
+            /* Blend mode */
+            color: white;
+            /* Text color */
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="color-example">Text Color Example</h1>
+
+    <div class="background-example">
+        <h2>Background Color Example</h2>
+        <p>This is a div with a background color.</p>
+    </div>
+
+    <div class="background-image-example">
+        <h2>Background Image Example</h2>
+        <p>This is a div with a background image.</p>
+    </div>
+
+    <div class="linear-gradient-example">
+        <h2>Linear Gradient Example</h2>
+        <p>This is a div with a linear gradient background.</p>
+    </div>
+
+    <div class="radial-gradient-example">
+        <h2>Radial Gradient Example</h2>
+        <p>This is a div with a radial gradient background.</p>
+    </div>
+
+    <div class="multiple-backgrounds-example">
+        <h2>Multiple Backgrounds Example</h2>
+        <p>This is a div with multiple background images.</p>
+    </div>
+
+    <div class="blend-mode-example">
+        <h2>Background Blend Mode Example</h2>
+        <p>This is a div with a background image and blend mode.</p>
+    </div>
+</body>
+
+</html>

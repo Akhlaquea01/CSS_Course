@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial: Block vs. Inline Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .block-example {
+            display: block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .inline-example {
+            display: inline;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .conversion {
+            font-weight: bold;
+            color: #27ae60;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSS Tutorial: Block vs. Inline Elements</h1>
+
+        <!-- Part 1: Block-level Elements -->
+        <div class="section">
+            <h2>Block-level Elements</h2>
+            <p>Block-level elements create a rectangular block or box in the layout. They typically start on a new line
+                and stack vertically. Some common block-level elements include:</p>
+            <div class="block-example">Div (Block)</div>
+            <div class="block-example">Paragraph (Block)</div>
+            <div class="block-example">Heading (Block)</div>
+            <div class="block-example">List (Block)</div>
+            <div class="block-example">Table (Block)</div>
+            <p>Block-level elements occupy the full width available by default and force a line break before and after
+                themselves.</p>
+        </div>
+
+        <!-- Part 2: Inline-level Elements -->
+        <div class="section">
+            <h2>Inline-level Elements</h2>
+            <p>Inline-level elements do not create a new block. They flow within the content horizontally, typically
+                from left to right. Some common inline-level elements include:</p>
+            <span class="inline-example">Span (Inline)</span>
+            <a href="#" class="inline-example">Link (Inline)</a>
+            <strong class="inline-example">Strong (Inline)</strong>
+            <em class="inline-example">Emphasis (Inline)</em>
+            <br>
+            <p>Inline-level elements only take up as much width as necessary for their content and do not force line
+                breaks.</p>
+        </div>
+
+        <!-- Part 3: Converting Elements -->
+        <div class="section">
+            <h2>Converting Elements</h2>
+            <p>You can convert block-level elements to inline-level and vice versa using CSS. Here's how:</p>
+
+            <div class="block-example">This is a block-level element.</div>
+            <p class="conversion">To convert to inline-level, use: display: inline;</p>
+
+            <span class="inline-example">This is an inline-level element.</span>
+            <p class="conversion">To convert to block-level, use: display: block;</p>
+        </div>
+    </div>
+</body>
+
+</html>

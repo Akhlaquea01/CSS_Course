@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM (Block Element Modifier) Methodology</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        /* Block: Header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .header__nav {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .header__menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* Add this */
+        }
+
+        .header__menu-item {
+            margin-right: 20px;
+            display: flex;
+            /* Add this */
+            align-items: center;
+            /* Add this to vertically center items */
+        }
+
+        .header__menu-link {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .header__menu-link--active {
+            font-weight: bold;
+        }
+
+        /* Block: Content */
+        .content {
+            padding: 20px;
+        }
+
+        .content__block {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .content__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content__text {
+            font-size: 16px;
+        }
+
+        /* Block: Button */
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Modifier: Primary Button */
+        .button--primary {
+            background-color: #ff6600;
+        }
+
+        /* Block: Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .footer__copyright {
+            font-size: 14px;
+        }
+    </style>
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Home</a></li>
+                <li class="header__menu-item"><a href="#" class="header__menu-link">About</a></li>
+                <li class="header__menu-item"><a href="#"
+                        class="header__menu-link header__menu-link--active">Services</a></li>
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="content__block">
+            <h1 class="content__title">Understanding BEM (Block Element Modifier) Methodology</h1>
+            <p class="content__text">BEM (Block Element Modifier) is a popular CSS methodology used for writing clean,
+                maintainable, and scalable code in web development.</p>
+            <p class="content__text">BEM divides the user interface into distinct blocks, elements, and modifiers,
+                making it easier to style and structure complex web applications.</p>
+            <p class="content__text">In BEM:</p>
+            <ul class="content__list">
+                <li class="content__list-item">A <strong>Block</strong> represents a high-level component or section of
+                    a webpage.</li>
+                <li class="content__list-item">An <strong>Element</strong> is a part of a block and has a contextual
+                    relationship with the block.</li>
+                <li class="content__list-item">A <strong>Modifier</strong> is used to alter the appearance or behavior
+                    of a block or element.</li>
+            </ul>
+            <p class="content__text">This methodology helps developers create structured and maintainable CSS code,
+                making it easier to collaborate on projects and reduce the risk of style conflicts.</p>
+            <button class="button">Learn More</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">© 2023 BEM Methodology</p>
+    </footer>
+</body>
+
+</html>

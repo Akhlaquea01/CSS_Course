@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMACSS (Scalable and Modular Architecture for CSS)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        /* Block: Header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .header__nav {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .header__menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* Add this */
+        }
+
+        .header__menu-item {
+            margin-right: 20px;
+            display: flex;
+            /* Add this */
+            align-items: center;
+            /* Add this to vertically center items */
+        }
+
+        .header__menu-link {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .header__menu-link--active {
+            font-weight: bold;
+        }
+
+        /* Block: Content */
+        .content {
+            padding: 20px;
+        }
+
+        .content__block {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .content__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content__text {
+            font-size: 16px;
+        }
+
+        /* Block: Button */
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Modifier: Primary Button */
+        .button--primary {
+            background-color: #ff6600;
+        }
+
+        /* Block: Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .footer__copyright {
+            font-size: 14px;
+        }
+    </style>
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Home</a></li>
+                <li class="header__menu-item"><a href="#" class="header__menu-link">About</a></li>
+                <li class="header__menu-item"><a href="#" class="header__menu-link header__menu-link--active">SMACSS</a>
+                </li>
+                <li class="header__menu-item"><a href="#" class="header__menu-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="content__block">
+            <h1 class="content__title">Understanding SMACSS (Scalable and Modular Architecture for CSS)</h1>
+            <p class="content__text">SMACSS, which stands for Scalable and Modular Architecture for CSS, is an
+                approach to organizing and structuring your CSS code to make it more maintainable, scalable, and
+                modular.</p>
+            <p class="content__text">In SMACSS:</p>
+            <ul class="content__list">
+                <li class="content__list-item">A <strong>Base</strong> style is the default styling applied to
+                    elements without any classes or IDs.</li>
+                <li class="content__list-item">A <strong>Layout</strong> style defines the overall structure and
+                    positioning of major sections of a webpage, such as header, footer, and main content areas.</li>
+                <li class="content__list-item">A <strong>Module</strong> style represents reusable, self-contained
+                    UI components or widgets, like buttons, forms, and navigation bars.</li>
+                <li class="content__list-item">A <strong>State</strong> style handles the visual changes in response
+                    to user interactions or page states, such as hover, active, or error states.</li>
+                <li class="content__list-item">A <strong>Theme</strong> style defines the overall visual theme of the
+                    website, including color schemes and typography.</li>
+            </ul>
+            <p class="content__text">By following the SMACSS approach, web developers can create CSS code that is
+                easier to maintain, promotes reusability, and reduces the chances of style conflicts in large
+                projects.</p>
+            <button class="button">Learn More</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">© 2023 SMACSS</p>
+    </footer>
+</body>
+
+</html>

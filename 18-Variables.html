@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Variables (Custom Properties) Example</title>
+    <style>
+        /* Declaring and Using Custom Properties */
+        :root {
+            --primary-color: #007BFF;
+            /* Color */
+            --font-size: 16px;
+            /* Length */
+            --line-height: 1.5;
+            /* Number */
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: #333;
+            /* Fallback color */
+            font-size: var(--font-size);
+            line-height: var(--line-height);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Cascading Custom Properties */
+        .container {
+            --primary-color: #FF5733;
+            /* Override primary color for this container */
+            margin: 20px;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Custom Properties with Different Data Types */
+        .size-example {
+            --border-width: 2px;
+            /* Length */
+            --box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            /* Color */
+            border: var(--border-width) solid #333;
+            box-shadow: var(--box-shadow);
+            padding: 10px;
+        }
+
+        /* Inheritance of Custom Properties */
+        .child {
+            font-size: var(--font-size);
+            /* Inherits the font size from :root */
+            color: var(--text-color, #333);
+            /* Inherits the text color, fallback to #333 if not defined */
+        }
+
+        /* Reusability of Custom Properties */
+        .highlight-text {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Advanced CSS Variables (Custom Properties) Example</h2>
+
+    <div class="container">
+        <p>This container has its own primary color.</p>
+        <p>Text color still inherits from :root.</p>
+    </div>
+
+    <p>Text outside the container uses :root custom properties.</p>
+
+    <div class="size-example">
+        <p>Custom properties with different data types:</p>
+        <div style="border: var(--border-width) solid #333;">Border Width</div>
+        <div style="box-shadow: var(--box-shadow);">Box Shadow</div>
+    </div>
+
+    <div class="child">
+        <p>Inheritance of custom properties:</p>
+        <p>This text inherits font size and uses a fallback text color.</p>
+    </div>
+
+    <p class="highlight-text">Reusability of custom properties: This text is highlighted.</p>
+</body>
+
+</html>

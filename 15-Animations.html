@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Animations</title>
+    <style>
+        /* Keyframes animation */
+        @keyframes rotate-scale {
+            0% {
+                transform: rotate(0deg) scale(1);
+                background-color: #007BFF;
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.2);
+                background-color: #33FF57;
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1);
+                background-color: #FF5733;
+            }
+        }
+
+        /* Animation properties */
+        .animation-example {
+            width: 100px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+            animation-name: rotate-scale;
+            /* Name of the keyframes animation */
+            animation-duration: 2s;
+            /* Duration of the animation */
+            animation-timing-function: ease-in-out;
+            /* Timing function for smooth animation */
+            animation-delay: 0.5s;
+            /* Delay before animation starts */
+            animation-iteration-count: infinite;
+            /* Repeat animation infinitely */
+            animation-direction: alternate;
+            /* Reverse the animation direction on alternate iterations */
+        }
+
+        /* Multiple animations */
+        .multiple-animations {
+            animation: rotate 1s linear infinite, colorChange 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: #007BFF;
+            }
+
+            50% {
+                background-color: #FF5733;
+            }
+
+            100% {
+                background-color: #33FF57;
+            }
+        }
+
+        /* Animation with steps timing function */
+        .steps-animation {
+            width: 100px;
+            height: 100px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+            animation-name: steps;
+            animation-duration: 2s;
+            animation-timing-function: steps(5, end);
+            /* Steps timing function */
+            animation-delay: 0.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes steps {
+
+            0%,
+            100% {
+                transform: scaleX(1);
+            }
+
+            50% {
+                transform: scaleX(0.5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animation-example">Rotate and Scale</div>
+
+    <div class="animation-example multiple-animations">Multiple Animations</div>
+
+    <div class="steps-animation">Steps Timing Function</div>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors and Specificity</title>
+    <style>
+        /* Specificity Example 1 */
+        /* The ID selector has the highest specificity */
+        #specificity-example {
+            color: #FF5733 !important;
+            /* Red color, !important is used */
+        }
+
+        /* Specificity Example 2 */
+        /* Class selectors */
+        .button {
+            background-color: #007BFF;
+            /* Blue background */
+            color: white;
+            /* White text */
+        }
+
+        .button:hover {
+            background-color: #33FF57;
+            /* Green background on hover */
+        }
+
+        /* Specificity Example 3 */
+        /* Element selector */
+        p {
+            font-size: 18px;
+            /* 18px font size */
+        }
+
+        /* Combining selectors with IDs and classes */
+        #specificity-example .button {
+            padding: 10px;
+            /* Additional padding for the button */
+        }
+
+        /* Using !important to override specificity */
+        .important-example {
+            color: #33FF57 !important;
+            /* Green color, !important is used */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Specificity Example 1 -->
+    <h2>Specificity Example 1</h2>
+    <p id="specificity-example">This text is red because of the <code>!important</code> declaration.</p>
+
+    <!-- Specificity Example 2 -->
+    <h2>Specificity Example 2</h2>
+    <button class="button">Button</button>
+    <br><br>
+    <button class="button">Button (Hover Me)</button>
+
+    <!-- Specificity Example 3 -->
+    <h2>Specificity Example 3</h2>
+    <p>This is a paragraph with a font size of 18px.</p>
+    <p class="button">This is a paragraph with a class that doesn't affect font size.</p>
+
+    <!-- Using !important to override specificity -->
+    <h2>Using !important</h2>
+    <p class="important-example">This text is green because of the <code>!important</code> declaration.</p>
+
+    <!--  -->
+    <h2>CSS Specificity Calculation</h2>
+    <div class="container">
+        <p>This is a paragraph with a class and an ID.</p>
+        <p class="button">This is a paragraph with a class.</p>
+        <p id="specificity">This is a paragraph with an ID.</p>
+        <p class="button important-example">This is a paragraph with a class and !important.</p>
+    </div>
+    <div class="explanation">
+        <h3>Specificity Calculation:</h3>
+        <p>#specificity has a specificity of 1,0,0,0</p>
+        <p>.button has a specificity of 0,1,0,0</p>
+        <p>p has a specificity of 0,0,1,0</p>
+        <p>.important-example has a specificity of 0,1,0,1</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial: Positioning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #444;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSS Tutorial: Positioning</h1>
+
+        <!-- Part 1: Static Positioning -->
+        <div class="section">
+            <h2>Static Positioning</h2>
+            <p>The <code>position: static;</code> value is the default positioning for all elements. Elements with
+                static positioning are placed in the normal document flow. Their positioning is not affected by the
+                <code>top</code> and <code>left</code> properties.
+            </p>
+            <div class="box static">Static</div>
+        </div>
+
+        <!-- Part 2: Relative Positioning -->
+        <div class="section">
+            <h2>Relative Positioning</h2>
+            <p>The <code>position: relative;</code> value allows you to adjust an element's position relative to its
+                normal position in the document flow. You can use the <code>top</code> and <code>left</code> properties
+                to move the element from its original position.</p>
+            <div class="box relative">Relative</div>
+        </div>
+
+        <!-- Part 3: Absolute Positioning -->
+        <div class="section">
+            <h2>Absolute Positioning</h2>
+            <p>The <code>position: absolute;</code> value removes an element from the normal document flow and positions
+                it relative to its nearest positioned ancestor. You can use the <code>top</code> and <code>left</code>
+                properties to specify its exact position.</p>
+            <div class="box absolute">Absolute</div>
+        </div>
+
+        <!-- Part 4: Fixed Positioning -->
+        <div class="section">
+            <h2>Fixed Positioning</h2>
+            <p>The <code>position: fixed;</code> value also removes an element from the normal document flow and
+                positions it relative to the viewport (the browser window). Fixed elements remain in the same position
+                even when the page is scrolled.</p>
+            <div class="box fixed">Fixed</div>
+        </div>
+    </div>
+</body>
+
+</html>
